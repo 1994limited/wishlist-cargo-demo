@@ -41,13 +41,17 @@
                 <input type="hidden" name="variant" value="{{ product_variants:options limit="1" }}{{ key }}{{ /product_variants:options }}" data-edition>
             {{ /if }}
             <label>
+                Save to
+                <select name="list" data-wishlist-lists aria-label="Which list to save to"></select>
+            </label>
+            <label>
                 Who's it for? <span class="meta">(optional)</span>
                 <input name="notes" placeholder="Mum's birthday, the book club…" maxlength="120">
             </label>
             <div>
                 <button type="submit" class="button button--ribbon">
-                    <span data-wishlist-when="not-added">Save {{ if product_variants:options }}this edition {{ /if }}to my list</span>
-                    <span data-wishlist-when="added">Update my list</span>
+                    <span data-wishlist-when="not-added">Save {{ if product_variants:options }}this edition{{ else }}it{{ /if }}</span>
+                    <span data-wishlist-when="added">Update it on this list</span>
                 </button>
             </div>
         {{ /wishlist:add }}
@@ -72,7 +76,8 @@
     if (first) {
         first.checked = true;
         chooseEdition(first.value);
-    } else {
+    } else if (document.querySelector('.buy input[name="variant"]')) {
+        // Every edition sold out.
         document.querySelector('.buy [type="submit"]').disabled = true;
     }
 </script>
