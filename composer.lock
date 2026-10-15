@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "850588ca07552eb0e4a01b3f0dfe76e2",
+    "content-hash": "4998f573a3cea57262a1e61e9f527ff7",
     "packages": [
         {
             "name": "1994/wishlist-statamic",
-            "version": "dev-cargo",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/1994limited/wishlist-statamic.git",
+                "reference": "c87f205fa2043d1616b4b3bf959cc09e41c010b7"
+            },
             "dist": {
-                "type": "path",
-                "url": "../wishlist-statamic",
-                "reference": "b70518488a5fd88eae076d9dfba5795ed4f3e6ae"
+                "type": "zip",
+                "url": "https://api.github.com/repos/1994limited/wishlist-statamic/zipball/c87f205fa2043d1616b4b3bf959cc09e41c010b7",
+                "reference": "c87f205fa2043d1616b4b3bf959cc09e41c010b7",
+                "shasum": ""
             },
             "require": {
                 "php": "^8.3",
@@ -26,16 +32,16 @@
             },
             "type": "statamic-addon",
             "extra": {
-                "statamic": {
-                    "name": "Wishlist",
-                    "description": "Let visitors save entries to wishlists and share them with a link. Lists live in flat files, the database or the visitor's browser.",
-                    "developer": "1994",
-                    "developer-url": "https://1994.co.uk"
-                },
                 "laravel": {
                     "providers": [
                         "NineteenNinetyFour\\Wishlist\\ServiceProvider"
                     ]
+                },
+                "statamic": {
+                    "name": "Wishlist",
+                    "developer": "1994",
+                    "description": "Let visitors save entries to wishlists and share them with a link. Lists live in flat files, the database or the visitor's browser.",
+                    "developer-url": "https://1994.co.uk"
                 }
             },
             "autoload": {
@@ -43,11 +49,7 @@
                     "NineteenNinetyFour\\Wishlist\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "NineteenNinetyFour\\Wishlist\\Tests\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -67,12 +69,11 @@
                 "wishlist"
             ],
             "support": {
-                "email": "hello@1994.co.uk"
+                "email": "hello@1994.co.uk",
+                "issues": "https://github.com/1994limited/wishlist-statamic/issues",
+                "source": "https://github.com/1994limited/wishlist-statamic/tree/v1.2.0"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2026-10-15T18:23:14+00:00"
         },
         {
             "name": "ajthinking/archetype",
@@ -12780,18 +12781,9 @@
             "time": "2025-12-08T11:19:18+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "1994/wishlist-statamic",
-            "version": "dev-cargo",
-            "alias": "1.2.0",
-            "alias_normalized": "1.2.0.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "1994/wishlist-statamic": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
