@@ -1,0 +1,42 @@
+<div class="shared-head">
+    <p class="eyebrow">A list someone sent you</p>
+    <h1>{{ title }}</h1>
+    <p>{{ count }} {{ count == 1 ? 'book' : 'books' }}. Buy one for them, or tap a ribbon to save it to your own list.</p>
+    {{ if !no_results }}{{ unless is_owner }}
+        {{ wishlist:import }}
+            <button type="submit" class="button button--ribbon">Save all {{ count }} to my list</button>
+        {{ /wishlist:import }}
+    {{ /unless }}{{ /if }}
+</div>
+
+{{ if no_results }}
+    <p class="empty" style="margin-inline: auto; text-align: center">Nothing on this list is on our shelves any more.</p>
+{{ else }}
+    <ul class="shelf">
+        {{ items }}
+            <li class="book">
+                {{ partial:cover link="true" }}
+                {{ partial:ribbon :ref="wishlist_item:id" }}
+                <div class="shelf__caption">
+                    <a href="{{ url }}">{{ title }}</a>
+                    <span class="meta">
+                        <span>{{ byline }}{{ if cargo:variant_name }} · {{ cargo:variant_name }}{{ /if }}</span>
+                        {{ if cargo:price_formatted }}<span class="price">{{ cargo:price_formatted }}</span>{{ else }}{{ partial:price }}{{ /if }}
+                    </span>
+                    {{ if wishlist_item:notes }}<span class="meta">“{{ wishlist_item:notes }}”</span>{{ /if }}
+                    {{ if cargo:in_stock }}
+                        {{ cart:add }}
+                            <input type="hidden" name="product" value="{{ cargo:product }}">
+                            {{ if cargo:variant }}<input type="hidden" name="variant" value="{{ cargo:variant }}">{{ /if }}
+                            <button type="submit" class="button button--small">Add to basket</button>
+                        {{ /cart:add }}
+                    {{ elseif cargo:needs_choice }}
+                        <a class="meta" href="{{ url }}">Choose an edition</a>
+                    {{ else }}
+                        <span class="meta">Sold out</span>
+                    {{ /if }}
+                </div>
+            </li>
+        {{ /items }}
+    </ul>
+{{ /if }}
