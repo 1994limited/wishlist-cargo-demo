@@ -1,6 +1,7 @@
 ---
 id: b00c0004-0000-4000-8000-000000000004
 blueprint: product
+tax_class: general
 title: 'The Lantern Ledger'
 byline: 'Tobias Wren'
 price: '9.99'

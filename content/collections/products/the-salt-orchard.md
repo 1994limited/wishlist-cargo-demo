@@ -1,6 +1,7 @@
 ---
 id: b00c0001-0000-4000-8000-000000000001
 blueprint: product
+tax_class: general
 title: 'The Salt Orchard'
 byline: 'Mara Ellison'
 price: '14.99'

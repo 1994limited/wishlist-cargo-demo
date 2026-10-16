@@ -58,7 +58,7 @@ Wishlist and Cargo are commercial addons. Running them locally like this needs n
 | `resources/views/wishlist/shared.antlers.html` | Buying from a shared list |
 | `resources/views/partials/price.antlers.html` | A book's price, or each edition's |
 | `resources/views/layout.antlers.html` | The basket count beside the saved count |
-| `resources/blueprints/collections/products/product.yaml` | The book blueprint: price, stock and editions (Cargo's `money` and `product_variants` fields) |
+| `resources/blueprints/collections/products/` | Two book blueprints: one edition (price and stock, Cargo's `money` field), or several (Cargo's `product_variants`, with stock per edition) |
 | `resources/views/checkout/` | Cargo's prebuilt checkout, published |
 
 Wishlist's [Cargo docs](https://github.com/1994limited/wishlist-statamic/blob/main/docs/cargo.md) explain each of these.

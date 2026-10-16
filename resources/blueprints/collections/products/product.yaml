@@ -10,16 +10,10 @@ tabs:
           - { handle: blurb, field: { type: textarea, display: Blurb } }
       -
         display: 'Price and stock'
-        instructions: 'A book in one edition has a price. A book in several (hardback and paperback) has editions instead, each with its own price and stock.'
+        instructions: 'For a book in several editions (hardback and paperback), use the "Book with editions" blueprint.'
         fields:
           - { handle: price, field: { type: money, display: Price, width: 50 } }
           - { handle: stock, field: { type: integer, display: Stock, instructions: 'Leave empty if you don''t count it.', width: 50 } }
-          - handle: product_variants
-            field:
-              type: product_variants
-              display: Editions
-              option_fields:
-                - { handle: stock, field: { type: integer, display: Stock } }
       -
         display: Cover
         fields:

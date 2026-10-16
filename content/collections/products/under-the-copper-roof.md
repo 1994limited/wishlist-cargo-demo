@@ -1,6 +1,7 @@
 ---
 id: b00c0009-0000-4000-8000-000000000009
 blueprint: product
+tax_class: general
 title: 'Under the Copper Roof'
 byline: 'Benedikt Shaw'
 price: '17.25'

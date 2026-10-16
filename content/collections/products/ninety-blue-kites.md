@@ -1,6 +1,7 @@
 ---
 id: b00c0007-0000-4000-8000-000000000007
 blueprint: product
+tax_class: general
 title: 'Ninety Blue Kites'
 byline: 'Lior Sandoval'
 price: '11.00'

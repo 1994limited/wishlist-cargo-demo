@@ -1,6 +1,7 @@
 ---
 id: b00c0002-0000-4000-8000-000000000002
 blueprint: product
+tax_class: general
 title: 'Small Weathers'
 byline: 'Idris Penhallow'
 price: '12.50'

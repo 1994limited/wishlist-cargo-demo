@@ -1,6 +1,7 @@
 ---
 id: b00c0006-0000-4000-8000-000000000006
-blueprint: product
+blueprint: book_editions
+tax_class: general
 title: 'Coral Arithmetic'
 byline: 'Dev Okafor'
 cover: '#D9725B'

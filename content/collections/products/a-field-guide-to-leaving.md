@@ -1,6 +1,7 @@
 ---
 id: b00c0003-0000-4000-8000-000000000003
-blueprint: product
+blueprint: book_editions
+tax_class: general
 title: 'A Field Guide to Leaving'
 byline: 'Noor Castellan'
 cover: '#5B3A5E'

@@ -1,6 +1,7 @@
 ---
 id: b00c0008-0000-4000-8000-000000000008
 blueprint: product
+tax_class: general
 title: 'The Quiet Apprentice'
 byline: 'Elsa Varga'
 price: '15.50'

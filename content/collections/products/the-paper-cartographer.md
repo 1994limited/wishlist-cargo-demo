@@ -1,6 +1,7 @@
 ---
 id: b00c0011-0000-4000-8000-000000000011
-blueprint: product
+blueprint: book_editions
+tax_class: general
 title: 'The Paper Cartographer'
 byline: 'Ruth Okonjo'
 cover: '#B5838D'

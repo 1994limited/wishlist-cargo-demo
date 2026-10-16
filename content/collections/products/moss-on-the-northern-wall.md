@@ -1,6 +1,7 @@
 ---
 id: b00c0005-0000-4000-8000-000000000005
-blueprint: product
+blueprint: book_editions
+tax_class: general
 title: 'Moss on the Northern Wall'
 byline: 'Hester Quaye'
 cover: '#6B7A3A'
